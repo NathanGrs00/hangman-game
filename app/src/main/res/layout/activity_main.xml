@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_game_topcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#A77A7A"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_game_bottomcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#5F5454"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/editTextText9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_showinput_background"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/editTextText8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_showinput_background"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/editTextText7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_showinput_background"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/editTextText6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_showinput_background"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="test" />
+
+                <EditText
+                    android:id="@+id/editTextText5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_showinput_background"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/editTextText4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_showinput_background"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/editTextText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_showinput_background"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/editTextText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_showinput_background"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <LinearLayout
+                android:id="@+id/ll_game_keyboardtop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_q"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_q" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_w"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_w" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_e" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_r"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_r" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_t" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_y" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_u"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_u" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_i"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_i" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_o"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_o" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_p" />
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <LinearLayout
+                android:id="@+id/ll_game_keyboardmiddle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_a" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_s" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_d" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_f"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_f" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_g" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_h" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_j"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_j" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_k"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_k" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_l" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <LinearLayout
+                android:id="@+id/ll_game_keyboardbottom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_z"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_z" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_x" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_c" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_v"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_v" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_b" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_n" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_game_keyboard_m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_keyboard_button"
+                    android:onClick="buttonIfYouPressThisTheColorWillChange"
+                    android:padding="0dp"
+                    android:text="@string/keyboard_m" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Hangman</string>
+
+    <string name="keyboard_q">Q</string>
+    <string name="keyboard_w">W</string>
+    <string name="keyboard_e">E</string>
+    <string name="keyboard_r">R</string>
+    <string name="keyboard_t">T</string>
+    <string name="keyboard_y">Y</string>
+    <string name="keyboard_u">U</string>
+    <string name="keyboard_i">I</string>
+    <string name="keyboard_o">O</string>
+    <string name="keyboard_p">P</string>
+
+    <string name="keyboard_a">A</string>
+    <string name="keyboard_s">S</string>
+    <string name="keyboard_d">D</string>
+    <string name="keyboard_f">F</string>
+    <string name="keyboard_g">G</string>
+    <string name="keyboard_h">H</string>
+    <string name="keyboard_j">J</string>
+    <string name="keyboard_k">K</string>
+    <string name="keyboard_l">L</string>
+
+    <string name="keyboard_z">Z</string>
+    <string name="keyboard_x">X</string>
+    <string name="keyboard_c">C</string>
+    <string name="keyboard_v">V</string>
+    <string name="keyboard_b">B</string>
+    <string name="keyboard_n">N</string>
+    <string name="keyboard_m">M</string>
+</resources>
