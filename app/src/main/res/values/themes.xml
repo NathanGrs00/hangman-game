@@ -5,5 +5,8 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.Hangman" parent="Base.Theme.Hangman" />
+    <style name="Theme.Hangman" parent="Base.Theme.Hangman">
+        <item name="android:navigationBarColor">@color/secondarybackground</item>
+        <item name="android:statusBarColor">@color/secondarybackground</item>
+    </style>
 </resources>

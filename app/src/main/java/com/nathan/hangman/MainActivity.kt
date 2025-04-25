@@ -1,17 +1,21 @@
 package com.nathan.hangman
 
+import android.app.Dialog
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.saadahmedev.popupdialog.PopupDialog
+import com.saadahmedev.popupdialog.listener.StandardDialogActionListener
+
 
 class MainActivity : AppCompatActivity() {
-    var word : String = "NACHTBUS"
-    var letters = word.toCharArray()
+    lateinit var word : String
+    lateinit var letters: CharArray
     val textViewIds = listOf(
         R.id.tvPosition1,
         R.id.tvPosition2,
@@ -37,8 +41,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        word = intent.getStringExtra("WORD")!!.uppercase()
+            .replace("\"", "")
+            .removePrefix("[")
+            .removeSuffix("]")
+        println(word)
+        letters = word.toCharArray()
 
         textViewIds.forEachIndexed { index, id ->
             findViewById<TextView>(id).text = letters[index].toString()
@@ -48,6 +58,10 @@ class MainActivity : AppCompatActivity() {
 
     fun buttonIfYouPressThisTheColorWillChange(view: View) {
         view as Button
+
+        if(imageFailCounter == 9) {
+            return
+        }
 
         if (word.contains(view.text)) {
             view.background = getDrawable(R.drawable.shape_keyboard_button_succes)
@@ -67,8 +81,41 @@ class MainActivity : AppCompatActivity() {
                 imageFailCounter++
             } else {
                 image.setImageDrawable(getDrawable(images[8]))
+                PopupDialog.getInstance(this,)
+                    .standardDialogBuilder()
+                    .createStandardDialog()
+                    .setHeading("Game over!")
+                    .setDescription(
+                        "Do you want to try again?"
+                    )
+                    .setIcon(R.drawable.stage_end)
+                    .setIconColor(android.R.color.holo_red_dark)
+                    .build(object : StandardDialogActionListener {
+                        override fun onPositiveButtonClicked(dialog: Dialog) {
+                            restartGame()
+                        }
+
+                        override fun onNegativeButtonClicked(dialog: Dialog) {
+                            returnHome()
+                            dialog.dismiss()
+                        }
+                    })
+                    .show()
             }
         }
         view.isClickable = false
+    }
+
+    private fun restartGame(){
+        val intent = Intent(this, MainActivity::class.java)
+        intent.putExtra("WORD", word)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun returnHome(){
+        val intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
