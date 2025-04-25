@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primarybackground">
+
+    <ImageView
+        android:id="@+id/iv_settings"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/schermafbeelding_2025_04_25_104948_removebg_preview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/whatsapp_image_2025_04_25_at_10_16_49_removebg_preview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="338dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:translationY="-50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_game"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:background="@drawable/game_button_hangman_removebg_preview"
+            android:fontFamily="@font/chewy"
+            android:text="New Game"
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_options"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:background="@drawable/game_button_hangman_removebg_preview"
+            android:fontFamily="@font/chewy"
+            android:text="Options"
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:background="@drawable/game_button_hangman_removebg_preview"
+            android:fontFamily="@font/chewy"
+            android:text="Exit"
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/game_bg_hangman_removebg_preview"
+        android:fontFamily="@font/chewy"
+        android:gravity="center"
+        android:text="Made by Zooitje ongeregeld, oftewel Ada"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
