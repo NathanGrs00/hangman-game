@@ -12,22 +12,31 @@
         android:id="@+id/ll_game_topcontainer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
-        android:background="#A77A7A"
-        android:orientation="vertical"></LinearLayout>
+        android:layout_weight="1.9"
+        android:background="@color/secondarybackground"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_hangman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/stage_01" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_game_bottomcontainer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#5F5454"
+        android:background="@color/secondarybackground"
         android:gravity="center"
         android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="75dp">
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".8">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -36,106 +45,140 @@
                 android:layout_marginEnd="10dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
+                android:weightSum="8"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <EditText
-                    android:id="@+id/editTextText9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <TextView
+                    android:id="@+id/tvPosition1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
                     android:layout_weight="1"
+                    android:textSize="22sp"
+                    android:textIsSelectable="false"
+                    android:textAllCaps="true"
                     android:background="@drawable/shape_showinput_background"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:text="" />
+                    android:gravity="center"
+                    android:text="@string/keyboard_a" />
 
-                <EditText
-                    android:id="@+id/editTextText8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <TextView
+                    android:id="@+id/tvPosition2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
                     android:layout_weight="1"
+                    android:textSize="22sp"
+                    android:textIsSelectable="false"
+                    android:textAllCaps="true"
                     android:background="@drawable/shape_showinput_background"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:text="" />
+                    android:gravity="center"
+                    android:text="@string/keyboard_b" />
 
-                <EditText
-                    android:id="@+id/editTextText7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <TextView
+                    android:id="@+id/tvPosition3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
                     android:layout_weight="1"
+                    android:textSize="22sp"
+                    android:textIsSelectable="false"
+                    android:textAllCaps="true"
                     android:background="@drawable/shape_showinput_background"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:text="" />
+                    android:gravity="center"
+                    android:text="@string/keyboard_c" />
 
-                <EditText
-                    android:id="@+id/editTextText6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <TextView
+                    android:id="@+id/tvPosition4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
                     android:layout_weight="1"
+                    android:textSize="22sp"
+                    android:textIsSelectable="false"
+                    android:textAllCaps="true"
                     android:background="@drawable/shape_showinput_background"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:text="test" />
+                    android:gravity="center"
+                    android:text="@string/keyboard_d" />
 
-                <EditText
-                    android:id="@+id/editTextText5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <TextView
+                    android:id="@+id/tvPosition5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
                     android:layout_weight="1"
+                    android:textSize="22sp"
+                    android:textIsSelectable="false"
+                    android:textAllCaps="true"
                     android:background="@drawable/shape_showinput_background"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:text="" />
+                    android:gravity="center"
+                    android:text="@string/keyboard_e" />
 
-                <EditText
-                    android:id="@+id/editTextText4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <TextView
+                    android:id="@+id/tvPosition6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
                     android:layout_weight="1"
+                    android:textSize="22sp"
+                    android:textIsSelectable="false"
+                    android:textAllCaps="true"
                     android:background="@drawable/shape_showinput_background"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:text="" />
+                    android:gravity="center"
+                    android:text="@string/keyboard_f" />
 
-                <EditText
-                    android:id="@+id/editTextText2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <TextView
+                    android:id="@+id/tvPosition7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
                     android:layout_weight="1"
+                    android:textSize="22sp"
+                    android:textIsSelectable="false"
+                    android:textAllCaps="true"
                     android:background="@drawable/shape_showinput_background"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:text="" />
+                    android:gravity="center"
+                    android:text="@string/keyboard_g" />
 
-                <EditText
-                    android:id="@+id/editTextText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <TextView
+                    android:id="@+id/tvPosition8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
                     android:layout_weight="1"
+                    android:textSize="22sp"
+                    android:textIsSelectable="false"
+                    android:textAllCaps="true"
                     android:background="@drawable/shape_showinput_background"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:text="" />
+                    android:gravity="center"
+                    android:text="@string/keyboard_f" />
+
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="75dp">
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
             <LinearLayout
                 android:id="@+id/ll_game_keyboardtop"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
                 android:orientation="horizontal"
+                android:weightSum="10"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -143,21 +186,22 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_q"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
                     android:onClick="buttonIfYouPressThisTheColorWillChange"
-                    android:padding="0dp"
                     android:text="@string/keyboard_q" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_w"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -167,9 +211,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_e"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -179,9 +224,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_r"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -191,9 +237,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_t"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -203,9 +250,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_y"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -215,9 +263,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_u"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -227,9 +276,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_i"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -239,9 +289,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_o"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -251,9 +302,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_p"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -267,17 +319,17 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="75dp">
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
             <LinearLayout
                 android:id="@+id/ll_game_keyboardmiddle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="25dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
-                android:layout_marginBottom="10dp"
                 android:orientation="horizontal"
+                android:weightSum="9"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -285,9 +337,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_a"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -297,9 +350,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_s"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -309,9 +363,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_d"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -321,9 +376,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_f"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -333,9 +389,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_g"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -345,9 +402,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_h"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -357,9 +415,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_j"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -369,9 +428,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_k"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -381,9 +441,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_l"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -395,16 +456,16 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="75dp">
+            android:layout_height="0dp"
+            android:layout_marginBottom="50dp"
+            android:layout_weight="1">
 
             <LinearLayout
                 android:id="@+id/ll_game_keyboardbottom"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="60dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginEnd="65dp"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -413,9 +474,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_z"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -425,9 +487,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_x"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -437,9 +500,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_c"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -449,9 +513,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_v"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -461,9 +526,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -473,9 +539,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_n"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"
@@ -485,9 +552,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_game_keyboard_m"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_keyboard_button"

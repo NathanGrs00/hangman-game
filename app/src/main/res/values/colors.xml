@@ -5,4 +5,5 @@
     <color name="succes">#4CC4BE</color>
     <color name="error">#F36247</color>
     <color name="primarybackground">#B59C8A</color>
+    <color name="secondarybackground">#907E70</color>
 </resources>
